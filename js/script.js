@@ -16,26 +16,19 @@
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
 // Songs
-var mySong = {
-"title":"Hollaback Girl",
-"artist": "Gwen Stefani",
-"mp3-url":"https://youtu.be/EAmChFTLP4w",
-"image-url":"https://cahkey.bandcamp.com/track/hollaback-girl-cahkey-remix",
-
-}
 
 var myPlayList = [
 	{
-		"title":"24K Magic",
+		"title":"24K",
 		"artist":"Bruno Mars",
 		"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
 		"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
 	},
 	{
-		"title":"Sir Duke",
-		"artist":"Stevie Wonder",
-		"mp3-url":"https://open.spotify.com/track/2udw7RDkldLFIPG9WYdVtT",
-		"image-url":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Songs_in_the_key_of_life.jpg/220px-Songs_in_the_key_of_life.jpg",
+		"title":"Medicine",
+		"artist":"Queen Naija",
+		"mp3-url":"https://www.youtube.com/watch?v=dc89yyOS0Z8",
+		"image-url":"https://i.ytimg.com/vi/BhKksAjzJis/maxresdefault.jpg",
 	},
 	{
 		"title":"Sorry",
@@ -44,12 +37,25 @@ var myPlayList = [
 		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
 	},
 	{
-		"title" :"one,two step",
+		"title" :"One,Two Step",
 		"artist":"Ciara" ,
-		"mp3-url":,https://youtu.be/4p4a6_06AEI
-		"image-url":,
+		"mp3-url":"https://youtu.be/4p4a6_06AEI",
+		"image-url":"https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Ciara_1%2C_2_step.jpg/220px-Ciara_1%2C_2_step.jpg",
 		
-	}
+	},
+	{
+"title":"Hollaback Girl",
+"artist": "Gwen Stefani",
+"mp3-url":"https://youtu.be/EAmChFTLP4w",
+"image-url":"https://www.ihollaback.org/app/uploads/2012/07/logo-holla-kerned.jpg",
+
+},
+{
+"title":"Nice For What",
+"artist": "Drake",
+"mp3-url":"https://www.youtube.com/watch?v=U9BwWKXjVaI",
+"image-url":"https://i.ytimg.com/vi/KRaPykuwCiw/maxresdefault.jpg",
+}
 
 ]
 
@@ -57,20 +63,27 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  
-for(var i =0; i< myPlaylist.length; i++){
+
+for(var i =0; i< myPlayList.length; i++){
     var songObject = myPlayList[i];
     var title = songObject.title;
-     $(".songs").append("<h3>" + title + "</h3>");   
+    var artist = songObject.artist;
+    var image = songObject["image-url"];
+     $(".myPlayList").append("<h3>" + title + "</h3>"); 
+     $(".myPlayList").append("<h3>" + artist + "</h3>");
+     $(".myPlayList").append("<img src = " + image + ">");
+     $(".myPlayList").append("<br>");
     console.log(title);
 }
-
 
 
 });
 
 function displayList(){
 
+for (var i = 0; i < myPlayListItems.length; i++) { 
+    $('.songs').append(myPlayListItems[i].text);
+}
 
   
 }
